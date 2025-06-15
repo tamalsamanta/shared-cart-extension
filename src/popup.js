@@ -1,3 +1,5 @@
+import { getCartItems } from "./firebase.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const addButton = document.getElementById("addButton");
 
@@ -18,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// src/popup.js
-import { getCartItems } from "./firebase.js";
 
 async function loadCart() {
   const container = document.getElementById("cartItems");
