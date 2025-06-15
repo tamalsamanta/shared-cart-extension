@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Shared Cart",
+  "version": "1.0",
+  "description": "Add and view items in a shared cart",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"] 
+    }
+  ]
+}
